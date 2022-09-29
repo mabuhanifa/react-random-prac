@@ -11,8 +11,18 @@ const Profile = ({ exercise }) => {
   return (
     <div className="p-5">
       <ToastContainer />
-      <div>
-        <h4>Abul Hasan</h4>
+      <div className="flex">
+        <div>
+          <img
+            src="https://www.gravatar.com/avatar/1b8fabaa8d66250a7049bdb9ecf44397?s=250&d=mm&r=x"
+            alt=""
+            className="w-20 rounded-xl"
+          />
+        </div>
+        <div className="ml-5">
+          <h4 className="text-xl font-bold">Abul Hasan</h4>
+          <p className="text-gray-500">Dhaka, Bangladesh</p>
+        </div>
       </div>
       <div className="p-5 flex justify-between">
         <div>
