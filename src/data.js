@@ -28,9 +28,9 @@ let data = [
   },
   {
     id: 4,
-    title: "Body Composition Analyzer",
+    title: "Composition Analyzer",
     description:
-      "Rotating Handles allow for an ergonomic testing position that does not put strain on user. ",
+      "Rotating Handles allow for an ergonomic testing position that does not put. ",
     age: "20 - 25",
     time: 45,
     img: "https://cdn.shopify.com/s/files/1/1333/0475/files/Mi35_Folding_240x240.jpg?v=1628712599",
@@ -48,7 +48,7 @@ let data = [
     id: 6,
     title: "Dumbbell Bench",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde explicabo sapiente quos.",
+      "Dumbbell Bench Active Trainer provides gentle mobilization  for an ergonomic testing ",
     age: "20 - 25",
     time: 120,
     img: "https://hirakraja.com/4728-medium_default/multi-functional-adjustable-dumbbell-bench-with-leg-press.jpg",

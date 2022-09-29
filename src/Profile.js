@@ -47,7 +47,7 @@ const Profile = ({ exercise }) => {
         </div>
       </div>
 
-      <div>
+      <div className="mt-10">
         <h2 className="text-xl font-bold">Add A Break</h2>
         <div className="flex justify-between text-xl mt-10  px-5">
           {breakTime.map((b) => {
@@ -57,7 +57,7 @@ const Profile = ({ exercise }) => {
           })}
         </div>
       </div>
-      <div className="mt-5">
+      <div className="mt-10">
         <h2 className="text-xl font-bold">Exercise Details</h2>
         <div className="p-2">
           <h2 className="text-xl font-bold my-10">
