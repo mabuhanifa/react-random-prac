@@ -38,18 +38,18 @@ const Profile = ({ exercise }) => {
         <h2 className="text-xl font-bold">Add A Break</h2>
         <div className="flex justify-between text-xl mt-10  px-5">
           {breakTime.map((b) => {
-            return <Break breakTime={b} key={b} setTime={setTime} />;
+            return <Break breakTime={b} key={b} setTime={setTime} time={time}/>;
           })}
         </div>
       </div>
       <div className="mt-5">
         <h2 className="text-xl font-bold">Exercise Details</h2>
-        <div className="m-5">
+        <div className="p-2">
           <h2 className="text-xl font-bold my-10">
-            Exercise Time <span className="text-gray-400 ml-5">{exerciseTime} Seconds</span>
+            Exercise Time <span className="text-gray-400 ml-2">{exerciseTime} Seconds</span>
           </h2>
           <h2 className="text-xl font-bold my-10">
-            Break Time <span className="text-gray-400 ml-5">{time} Seconds</span>
+            Break Time <span className="text-gray-400 ml-2">{time} Seconds</span>
           </h2>
         </div>
       </div>

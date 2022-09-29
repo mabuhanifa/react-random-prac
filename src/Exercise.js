@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Exercise = ({ data, setExercise, exercise }) => {
+  const [disable, setDisable] = useState(false);
+  const btnClass = "w-full py-2 my-5 text-white font-bold rounded-lg";
   const { title, description, age, time, img } = data;
+
+  const addExercise = () => {
+    setExercise([...exercise, time]);
+    setDisable(true);
+  };
   return (
     <div className="p-5">
       <div className="p-5">
@@ -14,13 +21,16 @@ const Exercise = ({ data, setExercise, exercise }) => {
           For Age : <span className="font-bold">{age} </span>
         </p>
         <p className="py-3">
-          Time Required : <span className="font-bold">{time} </span>{" "}
+          Time Required : <span className="font-bold">{time}s</span>
         </p>
         <button
-          className="bg-blue-500 px-20 py-2 my-5 text-white font-bold"
-          onClick={() => setExercise([...exercise, time])}
+          className={
+            disable ? `bg-green-500 ${btnClass}` : `bg-blue-500 ${btnClass}`
+          }
+          onClick={addExercise}
+          disabled={disable}
         >
-          Add to List
+          {disable ? "Added" : "Add to List"}
         </button>
       </div>
     </div>
