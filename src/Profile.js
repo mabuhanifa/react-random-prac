@@ -4,10 +4,17 @@ import "react-toastify/dist/ReactToastify.css";
 import Break from "./Break";
 
 const Profile = ({ exercise }) => {
+
   const breakTime = [10, 20, 30, 40, 50];
-  const exerciseTime = exercise.reduce((a, c) => a + c, 0);
+
+  const exerciseTime = exercise.reduce((e, c) => {
+    return c.time + e;
+  }, 0);
+
   const [time, setTime] = useState(0);
+
   const notify = () => toast.success("Great, Activity Completed!");
+  
   return (
     <div className="p-5">
       <ToastContainer />

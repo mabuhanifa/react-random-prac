@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div>
-      <h1 className="text-4xl font-bold m-5 text-indigo-700">Fusion Gym Center</h1>
+      <h1 className="text-4xl font-bold m-5 text-indigo-700">
+        Fusion Gym Center
+      </h1>
       <h1 className="text-2xl font-bold m-5">Select today’s exercise</h1>
       <div className="sm:flex m-5 gap-5">
         <div className="sm:w-9/12 grid sm:grid-cols-3 gap-5">

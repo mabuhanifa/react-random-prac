@@ -3,15 +3,24 @@ import React, { useState } from "react";
 const Exercise = ({ data, setExercise, exercise }) => {
   const [disable, setDisable] = useState(false);
   const btnClass = "w-full py-2 mt-5 text-white font-bold rounded-lg";
-  const { title, description, age, time, img } = data;
+  const { id, title, description, age, time, img } = data;
 
   const addExercise = () => {
-    setExercise([...exercise, time]);
+    setExercise([...exercise, data]);
     setDisable(true);
+  };
+  const removeExercise = (id) => {
+    const rExercise = exercise.filter((e) => e.id !== id);
+    setExercise(rExercise);
+    setDisable(false);
   };
   return (
     <div className="p-5 border w-full h-min">
-      <img src={img} alt="" className="w-full max-h-[150px] object-cover rounded-lg" />
+      <img
+        src={img}
+        alt=""
+        className="w-full max-h-[150px] object-cover rounded-lg"
+      />
       <div className="p-5">
         <h2 className="text-xl font-bold">{title}</h2>
         <p className="text-gray-500 py-3 pr-2">{description}</p>
@@ -23,13 +32,21 @@ const Exercise = ({ data, setExercise, exercise }) => {
         </p>
       </div>
       <button
-        className={
-          disable ? `bg-green-500 ${btnClass}` : `bg-blue-500 ${btnClass}`
-        }
+        className={disable ? `hidden` : `bg-blue-500 ${btnClass}`}
         onClick={addExercise}
         disabled={disable}
       >
         {disable ? "Added" : "Add to List"}
+      </button>
+      <button
+        className={
+          disable
+            ? "w-full py-2 mt-5 text-white font-bold rounded-lg bg-red-500"
+            : "hidden"
+        }
+        onClick={() => removeExercise(id)}
+      >
+        Remove
       </button>
     </div>
   );
