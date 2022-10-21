@@ -3,7 +3,6 @@ import "./App.css";
 import data from "./data";
 import Exercise from "./Exercise";
 import Profile from "./Profile";
-import Qna from "./Qna";
 
 function App() {
   const [exercise, setExercise] = useState([]);
@@ -30,9 +29,6 @@ function App() {
         <div className="sm:w-3/12 sm:grid-cols-1 border">
           <Profile exercise={exercise} />
         </div>
-      </div>
-      <div className="m-20">
-        <Qna />
       </div>
     </div>
   );
