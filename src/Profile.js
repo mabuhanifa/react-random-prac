@@ -67,13 +67,15 @@ const Profile = ({ exercise }) => {
       <div className="mt-10">
         <h2 className="text-xl font-bold">Exercise Details</h2>
         <div className="p-2">
-          <h2 className="text-xl font-bold my-10">
+          <h2 className="text-xl font-bold my-10 relative">
             Exercise Time{" "}
             <span className="text-gray-400 ml-2">{exerciseTime} Seconds</span>
+            <span className="p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer">Remove</span>
           </h2>
-          <h2 className="text-xl font-bold my-10">
+          <h2 className="text-xl font-bold my-10 relative">
             Break Time{" "}
             <span className="text-gray-400 ml-2">{time} Seconds</span>
+            <span className="p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer">Remove</span>
           </h2>
         </div>
       </div>

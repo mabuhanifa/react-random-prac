@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 const Exercise = ({ data, setExercise, exercise }) => {
   const [disable, setDisable] = useState(false);
-  const btnClass = "w-full py-3 mt-5 text-white text-lg font-bold rounded";
+  const btnClass = "w-full py-2 mt-5 text-white text-lg font-bold rounded";
   const { id, title, description, age, time, img } = data;
 
   const addExercise = () => {
@@ -40,7 +40,7 @@ const Exercise = ({ data, setExercise, exercise }) => {
       <button
         className={
           disable
-            ? "w-full py-3 mt-5 text-white font-bold rounded text-lg  bg-red-600"
+            ? "w-full py-2 mt-5 text-white font-bold rounded text-lg  bg-red-600"
             : "hidden"
         }
         onClick={() => removeExercise(id)}
