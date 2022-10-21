@@ -3,18 +3,22 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Break from "./Break";
 
-const Profile = ({ exercise }) => {
-
+const Profile = ({ setExercise,exercise }) => {
   const breakTime = [10, 20, 30, 40, 50];
 
   const exerciseTime = exercise.reduce((e, c) => {
     return c.time + e;
   }, 0);
+  const removeExerciseTime=()=>{
+    setExercise([])
+  }
+  const removeTime=()=>{
 
+  }
   const [time, setTime] = useState(0);
 
   const notify = () => toast.success("Great, Activity Completed!");
-  
+
   return (
     <div className="p-5">
       <ToastContainer />
@@ -70,12 +74,16 @@ const Profile = ({ exercise }) => {
           <h2 className="text-xl font-bold my-10 relative">
             Exercise Time{" "}
             <span className="text-gray-400 ml-2">{exerciseTime} Seconds</span>
-            <span className="p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer">Remove</span>
+            <span className="p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer" onClick={removeExerciseTime}>
+              Remove
+            </span>
           </h2>
           <h2 className="text-xl font-bold my-10 relative">
             Break Time{" "}
             <span className="text-gray-400 ml-2">{time} Seconds</span>
-            <span className="p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer">Remove</span>
+            <span className="p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer" onClick={removeTime}>
+              Remove
+            </span>
           </h2>
         </div>
       </div>
