@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 const Exercise = ({ data, setExercise, exercise }) => {
-  const [disable, setDisable] = useState(false);
   const btnClass = "w-full py-2 mt-5 text-white text-lg font-bold rounded";
   const { id, title, description, age, time, img } = data;
 
   const addExercise = () => {
     setExercise([...exercise, data]);
-    setDisable(true);
   };
   const removeExercise = (id) => {
     const rExercise = exercise.filter((e) => e.id !== id);
     setExercise(rExercise);
-    setDisable(false);
   };
   return (
     <div className="p-5 border w-full h-min">
@@ -31,15 +28,16 @@ const Exercise = ({ data, setExercise, exercise }) => {
         </p>
       </div>
       <button
-        className={disable ? `hidden` : `bg-indigo-700 ${btnClass}`}
+        className={
+          exercise.includes(data) ? "hidden" : `bg-indigo-700 ${btnClass}`
+        }
         onClick={addExercise}
-        disabled={disable}
       >
-        {disable ? "Added" : "Add to List"}
+        Add to List
       </button>
       <button
         className={
-          disable
+          exercise.includes(data)
             ? "w-full py-2 mt-5 text-white font-bold rounded text-lg  bg-red-600"
             : "hidden"
         }
