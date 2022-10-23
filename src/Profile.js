@@ -16,6 +16,7 @@ const Profile = ({ setExercise, exercise }) => {
   const [time, setTime] = useState(0);
   const removeTime = () => {
     setTime(0);
+    localStorage.setItem("localTasks", JSON.stringify(0));
   };
   const notify = () => toast.success("Great, Activity Completed!");
 
