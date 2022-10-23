@@ -88,7 +88,9 @@ const Profile = ({ setExercise, exercise }) => {
             <span className="text-gray-400 ml-2">{time} Seconds</span>
             <span
               className={
-                "p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer"
+                time
+                  ? "p-1 text-sm absolute right-0 text-white font-thin bg-red-600 rounded cursor-pointer"
+                  : "hidden"
               }
               onClick={removeTime}
             >
