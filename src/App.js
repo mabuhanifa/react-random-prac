@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import data from "./data";
-import Exercise from "./Exercise";
-import Profile from "./Profile";
+import Exercise from "./components/Exercise";
+import Profile from "./components/Profile";
+import data from "./data/data";
 
 function App() {
   const [exercise, setExercise] = useState([]);
