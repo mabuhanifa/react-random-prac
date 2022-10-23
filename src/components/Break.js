@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 const Break = ({ breakTime, setTime, time }) => {
-  const bgClass = "cursor-pointer bg-blue-500 p-2 rounded-full text-white";
+  const bgClass = "cursor-pointer bg-blue-500 p-2 rounded-full text-white ";
 
   useEffect(() => {
     if (localStorage.getItem("localTasks")) {
@@ -15,7 +15,7 @@ const Break = ({ breakTime, setTime, time }) => {
   };
   return (
     <div
-      className={time === breakTime ? bgClass : "cursor-pointer p-2"}
+      className={time === breakTime ? bgClass : "cursor-pointer p-2 border border-gray-300 rounded-full"}
       onClick={addTime}
     >
       <span>{breakTime}s</span>
