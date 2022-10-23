@@ -12,9 +12,11 @@ const Profile = ({ setExercise, exercise }) => {
   const removeExerciseTime = () => {
     setExercise([]);
   };
-  const removeTime = () => {};
-  const [time, setTime] = useState(0);
 
+  const [time, setTime] = useState(0);
+  const removeTime = () => {
+    setTime(0);
+  };
   const notify = () => toast.success("Great, Activity Completed!");
 
   return (
