@@ -18,7 +18,16 @@ const Profile = ({ setExercise, exercise }) => {
     setTime(0);
     localStorage.setItem("localTasks", JSON.stringify(0));
   };
-  const notify = () => toast.success("Great, Activity Completed!");
+
+  const notify = () => {
+    removeExerciseTime();
+    removeTime();
+    if (exercise.length) {
+      toast.success("Great, Activity Completed!");
+    } else {
+      toast.error("No Exercise Selected!");
+    }
+  };
 
   return (
     <div className="p-5">
@@ -106,7 +115,7 @@ const Profile = ({ setExercise, exercise }) => {
         className="mt-20 py-5 w-full bg-blue-700 text-white font-bold text-lg rounded"
         onClick={notify}
       >
-        Activity Completed
+        Complete Activity
       </button>
     </div>
   );
