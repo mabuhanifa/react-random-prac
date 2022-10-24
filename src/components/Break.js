@@ -15,7 +15,11 @@ const Break = ({ breakTime, setTime, time }) => {
   };
   return (
     <div
-      className={time === breakTime ? bgClass : "cursor-pointer p-2 border border-gray-300 rounded-full"}
+      className={
+        time === breakTime
+          ? bgClass
+          : "cursor-pointer p-2 border border-gray-300 rounded-full"
+      }
       onClick={addTime}
     >
       <span>{breakTime}s</span>

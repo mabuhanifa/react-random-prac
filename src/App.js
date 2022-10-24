@@ -27,7 +27,7 @@ function App() {
           })}
         </div>
         <div className="sm:w-3/12 sm:grid-cols-1 border">
-          <Profile exercise={exercise} setExercise={setExercise}/>
+          <Profile exercise={exercise} setExercise={setExercise} />
         </div>
       </div>
     </div>
