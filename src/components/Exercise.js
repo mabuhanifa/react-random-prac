@@ -1,11 +1,15 @@
 import React from "react";
 const Exercise = ({ data, setExercise, exercise }) => {
+
   const btnClass = "w-full py-2 mt-5 text-white text-lg font-bold rounded";
+
+  /* ------------------ data destructuring------------------ */
   const { id, title, description, age, time, img } = data;
 
   const addExercise = () => {
     setExercise([...exercise, data]);
   };
+  
   const removeExercise = (id) => {
     const rExercise = exercise.filter((e) => e.id !== id);
     setExercise(rExercise);

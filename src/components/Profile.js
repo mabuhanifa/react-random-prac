@@ -6,9 +6,12 @@ import Break from "./Break";
 const Profile = ({ setExercise, exercise }) => {
   const breakTime = [10, 20, 30, 40, 50];
 
+  
+  /* ------------------ calculate exercise time ------------------ */
   const exerciseTime = exercise.reduce((e, c) => {
     return c.time + e;
   }, 0);
+
   const removeExerciseTime = () => {
     setExercise([]);
   };
@@ -19,6 +22,7 @@ const Profile = ({ setExercise, exercise }) => {
     localStorage.setItem("localTasks", JSON.stringify(0));
   };
 
+  /* ------------------ toast ------------------ */
   const notify = () => {
     removeExerciseTime();
     removeTime();
